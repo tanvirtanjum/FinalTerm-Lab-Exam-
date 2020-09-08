@@ -58,8 +58,8 @@
                 <td>{{$info[$i]->uname}}</td>
           			<td>{{$info[$i]->pass}}</td>
           			<td>
-          				<a href="/admin/edit/{{$info[$i]->id}}">Edit</a> |
-          				<a href="/home/delete/{{$info[$i]->id}}">Delete</a>
+          				<a href="{{route('admin.edit', [$info[$i]->id])}}">Edit</a> |
+          				<a href="{{route('admin.delete', [$info[$i]->id])}}">Delete</a>
           			</td>
           		</tr>
           	  @endfor

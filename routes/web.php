@@ -25,5 +25,9 @@ Route::post('/login', 'LoginController@execute');
 Route::get('/admin', 'AdminController@index')->name('admin.index');
 Route::post('/admin', 'AdminController@insert');
 
+Route::get('/admin/delete/{id}', 'AdminController@delete')->name('admin.delete');
+Route::get('/admin/edit/{id}', 'AdminController@modify')->name('admin.edit');
+Route::post('/admin/edit/{id}', 'AdminController@edit');
+
 Route::get('/reg', 'RegController@index')->name('reg.index');
 Route::post('/reg', 'RegController@insert');

@@ -58,8 +58,8 @@
                 <td><?php echo e($info[$i]->uname); ?></td>
           			<td><?php echo e($info[$i]->pass); ?></td>
           			<td>
-          				<a href="/admin/edit/<?php echo e($info[$i]->id); ?>">Edit</a> |
-          				<a href="/home/delete/<?php echo e($info[$i]->id); ?>">Delete</a>
+          				<a href="<?php echo e(route('admin.edit', [$info[$i]->id])); ?>">Edit</a> |
+          				<a href="<?php echo e(route('admin.delete', [$info[$i]->id])); ?>">Delete</a>
           			</td>
           		</tr>
           	  <?php endfor; ?>
