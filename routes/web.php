@@ -26,3 +26,4 @@ Route::get('/admin', 'AdminController@index')->name('admin.index');
 Route::post('/admin', 'AdminController@insert');
 
 Route::get('/reg', 'RegController@index')->name('reg.index');
+Route::post('/reg', 'RegController@insert');
