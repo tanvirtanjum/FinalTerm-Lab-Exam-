@@ -49,20 +49,20 @@
               <td> ACTION </td>
             </thead>
             <tbody>
-              @for($i=0; $i != count($info); $i++)
+              <?php for($i=0; $i != count($info); $i++): ?>
           		<tr>
-          			<td>{{$info[$i]->id}}</td>
-          			<td>{{$info[$i]->ename}}</td>
-                <td>{{$info[$i]->cname}}</td>
-          			<td>{{$info[$i]->num}}</td>
-                <td>{{$info[$i]->uname}}</td>
-          			<td>{{$info[$i]->pass}}</td>
+          			<td><?php echo e($info[$i]->id); ?></td>
+          			<td><?php echo e($info[$i]->ename); ?></td>
+                <td><?php echo e($info[$i]->cname); ?></td>
+          			<td><?php echo e($info[$i]->num); ?></td>
+                <td><?php echo e($info[$i]->uname); ?></td>
+          			<td><?php echo e($info[$i]->pass); ?></td>
           			<td>
-          				<a href="/admin/edit/{{$info[$i]->id}}">Edit</a> |
-          				<a href="/home/delete/{{$info[$i]->id}}">Delete</a>
+          				<a href="/admin/edit/<?php echo e($info[$i]->id); ?>">Edit</a> |
+          				<a href="/home/delete/<?php echo e($info[$i]->id); ?>">Delete</a>
           			</td>
           		</tr>
-          	  @endfor
+          	  <?php endfor; ?>
             </tbody>
           </table>
         </td>
@@ -71,3 +71,4 @@
   </body>
 
 </html>
+<?php /**PATH C:\xampp\htdocs\ATP3\Final Lab Exam\trunk\resources\views/admin/index.blade.php ENDPATH**/ ?>

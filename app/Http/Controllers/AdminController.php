@@ -10,15 +10,23 @@ class AdminController extends Controller
 
     function index()
     {
+      $info = DB::table('emp')->get();
       if(session()->get('TYPE') == 1)
       {
         //REQUIRE ADMIN_DASH VIEW (DONE)
-        return view('admin.index');
+        return view('admin.index')->with('info',$info);
       }
       else
       {
         return redirect()->route('login.index');
       }
 
+    }
+
+
+    function insert(Request $request)
+    {
+      DB::table('emp')->insert(['ename' => $request->a, 'cname' => $request->b, 'num' => $request->c, 'uname' => $request->d, 'pass' => $request->e, 'sid' => $request->f]);
+      return redirect()->route('admin.index');
     }
 }

@@ -23,5 +23,6 @@ Route::get('/login', 'LoginController@index')->name('login.index');
 Route::post('/login', 'LoginController@execute');
 
 Route::get('/admin', 'AdminController@index')->name('admin.index');
+Route::post('/admin', 'AdminController@insert');
 
 Route::get('/reg', 'RegController@index')->name('reg.index');
