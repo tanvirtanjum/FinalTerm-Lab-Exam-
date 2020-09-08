@@ -5,11 +5,11 @@ use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class RegController extends Controller
 {
 
     function index()
     {
-    	return view('home.index');
+    	return view('reg.index');
     }
 }

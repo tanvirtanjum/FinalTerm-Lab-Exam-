@@ -18,7 +18,10 @@ Route::get('/', function()
 
 //Session Validation Not Required
 Route::get('/home', 'HomeController@index')->name('home.index');
-Route::post('/home', 'HomeController@goto');
 
 Route::get('/login', 'LoginController@index')->name('login.index');
-Route::post('/login', 'LoginController@login_request');
+Route::post('/login', 'LoginController@execute');
+
+Route::get('/admin', 'AdminController@index')->name('admin.index');
+
+Route::get('/reg', 'RegController@index')->name('reg.index');
