@@ -30,7 +30,7 @@ class LoginController extends Controller
         if(session()->get('TYPE') == 2)
         {
           //REQUIRE MANAGER_DASH VIEW (DONE)
-          //return redirect()->route('managerDash.index');
+          return redirect()->route('employee.index');
         }
     	}
 
